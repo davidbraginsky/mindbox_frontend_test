@@ -27,7 +27,8 @@ body {
 }
 
 .labelChecked {
-  color: red;
+  color: #555555;
+  text-decoration: line-through;
 }
 
 /*# sourceMappingURL=styles.css.map */
