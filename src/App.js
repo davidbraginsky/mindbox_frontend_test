@@ -1,18 +1,43 @@
 import Heading from "./components/Heading";
 import Todo from "./components/Todo";
 import FormGroup from "@mui/material/FormGroup";
+import TextField from "@mui/material/TextField";
+import { v4 as uuidv4 } from "uuid";
+
+import { useContext } from "react";
+import TodoContext from "./context/TodoContext";
 
 function App() {
+  const { todo, setTodo, todoList, setTodoList } = useContext(TodoContext);
+
+  const inputHandler = (e) => {
+    setTodo(e.target.value);
+  };
+
+  const inputSubmitHandler = (e) => {
+    e.preventDefault();
+    const id = uuidv4();
+    const todoObj = {
+      value: todo,
+      id,
+      isCompleted: false,
+    };
+    setTodoList((prev) => [...prev, todoObj]);
+    setTodo("");
+  };
+
   return (
     <div className="container">
       <Heading title="todos" />
       <div className="todoPanel">
-        <input type="text" placeholder="what needs to be done?" />
+        <form onSubmit={inputSubmitHandler}>
+          <TextField id="outlined-basic" onInput={inputHandler} label="Todo" value={todo} variant="outlined" />
+        </form>
         <div className="todoList">
           <FormGroup>
-            <Todo todo="go somewhere" />
-            <Todo todo="go here" />
-            <Todo todo="go there" />
+            {todoList.map((item) => (
+              <Todo key={item.id} todo={item} />
+            ))}
           </FormGroup>
         </div>
         <div className="todoSummary">
