@@ -31,4 +31,15 @@ body {
   text-decoration: line-through;
 }
 
+.todoSummary {
+  display: flex;
+  margin-top: 16px;
+  justify-content: space-between;
+  width: 500px;
+}
+
+.completedElement {
+  cursor: pointer;
+}
+
 /*# sourceMappingURL=styles.css.map */

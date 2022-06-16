@@ -1,9 +1,14 @@
+// import components
 import Heading from "./components/Heading";
 import Todo from "./components/Todo";
+import TodoSummary from "./components/TodoSummary";
+
+// import MUI components
 import FormGroup from "@mui/material/FormGroup";
 import TextField from "@mui/material/TextField";
-import { v4 as uuidv4 } from "uuid";
 
+// import functionality
+import { v4 as uuidv4 } from "uuid";
 import { useContext } from "react";
 import TodoContext from "./context/TodoContext";
 
@@ -31,7 +36,7 @@ function App() {
       <Heading title="todos" />
       <div className="todoPanel">
         <form onSubmit={inputSubmitHandler}>
-          <TextField id="outlined-basic" onInput={inputHandler} label="Todo" value={todo} variant="outlined" />
+          <TextField fullWidth id="outlined-basic" onInput={inputHandler} label="Todo" value={todo} variant="outlined" />
         </form>
         <div className="todoList">
           <FormGroup>
@@ -40,15 +45,7 @@ function App() {
             ))}
           </FormGroup>
         </div>
-        <div className="todoSummary">
-          <span>2 items left</span>
-          <div className="todoFilterbox">
-            <span>All</span>
-            <span>Active</span>
-            <span>Completed</span>
-          </div>
-          <span>Clear completed</span>
-        </div>
+        <TodoSummary />
       </div>
     </div>
   );
