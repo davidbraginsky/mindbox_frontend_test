@@ -39,7 +39,7 @@ const TodoSummary = () => {
     <div className="todoSummary">
       <span>{filteredTodoList.length} items left</span>
       <div className="todoFilterbox">
-        <span ref={allFilterRef} onClick={changeTodoVisibility}>
+        <span className="selected" ref={allFilterRef} onClick={changeTodoVisibility}>
           All
         </span>
         <span ref={activeFilterRef} onClick={changeTodoVisibility}>

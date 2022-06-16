@@ -45,9 +45,7 @@
 ### Todo
 
 - add mobile styles
-- add hover styles
 - add animation for adding new todo
-- add styles to show which filter is currently active
 
 ## Автор
 

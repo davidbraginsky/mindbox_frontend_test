@@ -17,7 +17,9 @@ body {
   display: flex;
   align-items: center;
   flex-direction: column;
-  margin-top: 150px;
+  width: 80%;
+  margin: 150px auto 0;
+  min-width: 375px;
 }
 
 .heading {
@@ -35,15 +37,18 @@ body {
   display: flex;
   margin-top: 16px;
   justify-content: space-between;
-  width: 500px;
 }
-
-.completedElement {
+.todoSummary .completedElement {
   cursor: pointer;
+  transition: all 0.1s ease-in;
+}
+.todoSummary .completedElement:hover {
+  transform: translateY(-3px);
 }
 
 .todoFilterbox {
-  width: 170px;
+  width: 30%;
+  min-width: 170px;
   display: flex;
   justify-content: space-between;
 }
@@ -52,6 +57,24 @@ body {
 }
 .todoFilterbox span {
   cursor: pointer;
+  transition: all 0.1s ease-in;
+}
+.todoFilterbox span:hover {
+  transform: translateY(-3px);
+}
+
+@media (max-width: 550px) {
+  .todoSummary {
+    font-size: 13px;
+  }
+
+  .todoFilterbox {
+    min-width: 125px;
+  }
+}
+.todoPanel {
+  max-width: 600px;
+  width: 100%;
 }
 
 /*# sourceMappingURL=styles.css.map */

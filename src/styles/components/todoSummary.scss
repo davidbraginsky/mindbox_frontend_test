@@ -2,15 +2,20 @@
   display: flex;
   margin-top: 16px;
   justify-content: space-between;
-  width: 500px;
-}
 
-.completedElement {
-  cursor: pointer;
+  & .completedElement {
+    cursor: pointer;
+    transition: all 0.1s ease-in;
+
+    &:hover {
+      transform: translateY(-3px);
+    }
+  }
 }
 
 .todoFilterbox {
-  width: 170px;
+  width: 30%;
+  min-width: 170px;
   display: flex;
   justify-content: space-between;
 
@@ -20,5 +25,20 @@
 
   & span {
     cursor: pointer;
+    transition: all 0.1s ease-in;
+
+    &:hover {
+      transform: translateY(-3px);
+    }
+  }
+}
+
+@media (max-width: 550px) {
+  .todoSummary {
+    font-size: 13px;
+  }
+
+  .todoFilterbox {
+    min-width: 125px;
   }
 }
