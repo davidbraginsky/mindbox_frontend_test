@@ -1,22 +1,19 @@
+import Heading from "./components/Heading";
+import Todo from "./components/Todo";
+import FormGroup from "@mui/material/FormGroup";
+
 function App() {
   return (
     <div className="container">
-      <h1>todos</h1>
+      <Heading title="todos" />
       <div className="todoPanel">
-        <div className="todoHeader">What needs to be done?</div>
+        <input type="text" placeholder="what needs to be done?" />
         <div className="todoList">
-          <div className="todo">
-            <input type="checkbox" id="random-1" />
-            <label htmlFor="random-1">Тестовое задание</label>
-          </div>
-          <div className="todo">
-            <input type="checkbox" id="random-2" />
-            <label htmlFor="random-2">Прекрасный код</label>
-          </div>
-          <div className="todo">
-            <input type="checkbox" id="random-3" />
-            <label htmlFor="random-3">Покрытие тестами</label>
-          </div>
+          <FormGroup>
+            <Todo todo="go somewhere" />
+            <Todo todo="go here" />
+            <Todo todo="go there" />
+          </FormGroup>
         </div>
         <div className="todoSummary">
           <span>2 items left</span>
