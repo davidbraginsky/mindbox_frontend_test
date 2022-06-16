@@ -1,0 +1,44 @@
+.todoSummary {
+  display: flex;
+  margin-top: 16px;
+  justify-content: space-between;
+
+  & .completedElement {
+    cursor: pointer;
+    transition: all 0.1s ease-in;
+
+    &:hover {
+      transform: translateY(-3px);
+    }
+  }
+}
+
+.todoFilterbox {
+  width: 30%;
+  min-width: 170px;
+  display: flex;
+  justify-content: space-between;
+
+  & .selected {
+    color: $green;
+  }
+
+  & span {
+    cursor: pointer;
+    transition: all 0.1s ease-in;
+
+    &:hover {
+      transform: translateY(-3px);
+    }
+  }
+}
+
+@media (max-width: 550px) {
+  .todoSummary {
+    font-size: 13px;
+  }
+
+  .todoFilterbox {
+    min-width: 125px;
+  }
+}
