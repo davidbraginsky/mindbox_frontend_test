@@ -1,6 +1,6 @@
 # Mindbox Frontend Test
 
-Тестовое задание на позицию Frontend Developer Intern для компании Gridnine
+Тестовое задание на позицию Frontend Developer Intern для компании mindbox
 
 ### Оглавление
 
@@ -19,15 +19,17 @@
 
 Пользователи могут:
 
-Технические требования:
+- добавлять новые задачи
+- фильтровать задачи по статусу
+- чистить список от отмеченных задач
 
 ### Скриншот
 
-<!-- ![Screenshot of app](./src/assets/gridnine_screenshot.png) -->
+![Screenshot of app](./src/assets/todo_screenshot.png)
 
 ### Ссылки
 
-<!-- [Live Website](https://davidbraginsky.github.io/gridnine_frontend_test/) -->
+[Live Website](https://davidbraginsky.github.io/mindbox_frontend_test/)
 
 ## Разработка
 
@@ -44,8 +46,7 @@
 
 ### Todo
 
-- add mobile styles
-- add animation for adding new todo
+- добавить анимации при добавлении новой задачи
 
 ## Автор
 
