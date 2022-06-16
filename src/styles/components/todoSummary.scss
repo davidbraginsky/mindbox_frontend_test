@@ -8,3 +8,17 @@
 .completedElement {
   cursor: pointer;
 }
+
+.todoFilterbox {
+  width: 170px;
+  display: flex;
+  justify-content: space-between;
+
+  & .selected {
+    color: $green;
+  }
+
+  & span {
+    cursor: pointer;
+  }
+}

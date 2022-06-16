@@ -42,4 +42,16 @@ body {
   cursor: pointer;
 }
 
+.todoFilterbox {
+  width: 170px;
+  display: flex;
+  justify-content: space-between;
+}
+.todoFilterbox .selected {
+  color: #77c0af;
+}
+.todoFilterbox span {
+  cursor: pointer;
+}
+
 /*# sourceMappingURL=styles.css.map */

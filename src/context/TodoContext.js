@@ -7,8 +7,9 @@ const TodoContext = createContext();
 export function TodoProvider({ children }) {
   const [todoList, setTodoList] = useState([]);
   const [todo, setTodo] = useState("");
+  const [showFlag, setShowFlag] = useState("");
 
-  return <TodoContext.Provider value={{ todoList, setTodoList, todo, setTodo }}>{children}</TodoContext.Provider>;
+  return <TodoContext.Provider value={{ todoList, setTodoList, todo, setTodo, showFlag, setShowFlag }}>{children}</TodoContext.Provider>;
 }
 
 export default TodoContext;
